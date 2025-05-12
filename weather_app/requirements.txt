@@ -1,0 +1,8 @@
+Flask
+SQLAlchemy
+psycopg2-binary
+requests
+apscheduler
+matplotlib
+plotly
+python-dotenv

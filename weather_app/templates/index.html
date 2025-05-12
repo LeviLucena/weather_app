@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Previsão do Tempo</title>
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Estilo customizado -->
+    <style>
+        body {
+            background-color: #f5f5f5;
+            padding-top: 60px;
+        }
+        .weather-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Formulário de busca -->
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 weather-form">
+            <h2 class="text-center">Consulta de Clima - Meteoblue</h2>
+        {% if last_update %}
+            <p class="text-center text-muted">Última atualização automática: {{ last_update }}</p>
+        {% endif %}
+
+            <form action="/fetch_weather" method="post">
+                <div class="form-group">
+                    <label for="latitude">Latitude:</label>
+                    <input type="text" class="form-control" name="latitude" placeholder="Ex: -23.55" value="-23.55" required>
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Longitude:</label>
+                    <input type="text" class="form-control" name="longitude" placeholder="Ex: -46.63" value="-46.63" required>
+                </div>
+                <div class="form-group">
+                    <label for="data_inicial">Data Inicial:</label>
+                    <input type="date" class="form-control" name="data_inicial">
+                </div>
+                <div class="form-group">
+                    <label for="data_final">Data Final:</label>
+                    <input type="date" class="form-control" name="data_final">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Buscar Previsão</button>
+            </form>
+
+            {% if success %}
+                <div class="alert alert-success text-center" role="alert" style="margin-top: 20px;">
+                    Previsão obtida com sucesso!
+                    <br>
+                    <a href="/report?data_inicial={{ request.form.get('data_inicial') }}&data_final={{ request.form.get('data_final') }}" class="btn btn-success" style="margin-top:10px;">Ver Relatório</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Gráfico de temperatura estático -->
+    {% if img_data %}
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-12">
+                <h2 class="text-center">Gráfico de Temperatura</h2>
+                <img src="data:image/png;base64,{{ img_data }}" alt="Gráfico de Temperatura" class="img-responsive center-block">
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Gráfico interativo do Plotly -->
+    {% if plotly_graph %}
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-12">
+                <h2 class="text-center">Gráfico Interativo de Temperatura</h2>
+                <div>{{ plotly_graph|safe }}</div>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Tabela com dados da previsão -->
+    {% if result %}
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-12">
+                <h2 class="text-center">Previsões dos Próximos Dias</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Temperatura Mínima</th>
+                            <th>Temperatura Máxima</th>
+                            <th>Condição Climática</th>
+                            <th>Velocidade do Vento</th>
+                            <th>Probabilidade de Precipitação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for forecast in result %}
+                            <tr>
+                                <td>{{ forecast.date }}</td>
+                                <td>{{ forecast.min_temp }}°C</td>
+                                <td>{{ forecast.max_temp }}°C</td>
+                                <td>{{ forecast.description }}</td>
+                                <td>{{ forecast.wind_speed }} km/h</td>
+                                <td>{{ forecast.precipitation_probability }}%</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+
+</div>
+
+<!-- Bootstrap JS e dependências -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
