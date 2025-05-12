@@ -1,8 +1,57 @@
-# 🌤️ Weather Forecast App
+<p align="center">
+  <!-- Linguagem principal -->
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python Badge" />
+  </a>
+  
+  <!-- Framework web -->
+  <a href="https://flask.palletsprojects.com/">
+    <img src="https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask Badge" />
+  </a>
+
+  <!-- Banco de dados -->
+  <a href="https://www.postgresql.org/">
+    <img src="https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL Badge" />
+  </a>
+
+  <!-- Biblioteca ORM -->
+  <a href="https://www.sqlalchemy.org/">
+    <img src="https://img.shields.io/badge/-SQLAlchemy-E44C24?style=flat-square&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy Badge" />
+  </a>
+
+  <!-- Agendador de tarefas -->
+  <a href="https://apscheduler.readthedocs.io/">
+    <img src="https://img.shields.io/badge/-APScheduler-4B8BBE?style=flat-square&logo=python&logoColor=white" alt="APScheduler Badge" />
+  </a>
+
+  <!-- Gráficos -->
+  <a href="https://matplotlib.org/">
+    <img src="https://img.shields.io/badge/-Matplotlib-11557C?style=flat-square&logo=plotly&logoColor=white" alt="Matplotlib Badge" />
+  </a>
+
+  <a href="https://plotly.com/">
+    <img src="https://img.shields.io/badge/-Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white" alt="Plotly Badge" />
+  </a>
+
+  <!-- API de clima -->
+  <a href="https://content.meteoblue.com/en/business-solutions/weather-apis">
+    <img src="https://img.shields.io/badge/-Meteoblue%20API-0072C6?style=flat-square&logo=cloud&logoColor=white" alt="Meteoblue Badge" />
+  </a>
+
+  <!-- Ambiente -->
+  <a href="https://pypi.org/project/python-dotenv/">
+    <img src="https://img.shields.io/badge/-Dotenv-000000?style=flat-square&logo=python&logoColor=white" alt="Dotenv Badge" />
+  </a>
+
+  <!-- Status do projeto -->
+  <img src="https://img.shields.io/badge/status-completo-brightgreen?style=flat-square" alt="Status Badge" />
+</p>
+
+![Gemini_Generated_Image_voioiivoioiivoio](https://github.com/user-attachments/assets/1f81099b-a0f3-4941-b0bc-e2df904918f7)
 
 Esta é uma aplicação web feita com **Flask** que consome dados da API de clima da **Meteoblue**, armazena em um banco de dados relacional e exibe relatórios interativos com **gráficos** de temperatura, vento e precipitação.
 
-![image](https://github.com/user-attachments/assets/3ce68dfe-aba5-4cd1-9c0f-e6a16be99d73)
+
 
 ## 🚀 Funcionalidades
 
@@ -88,10 +137,10 @@ weather-app/
 ```
 
 ## 📸 Exemplo da Interface
-| 🟦 **Imagem 1** 🟦       | 🟦 **Imagem 2** 🟦       | 🟦 **Imagem 3** 🟦       |
-|--------------------------|--------------------------|--------------------------|
-| ![Descrição1](https://github.com/user-attachments/assets/e1f7bec9-2192-42ea-aba3-7051021ff756) | ![Descrição2](https://github.com/user-attachments/assets/475ca998-4a89-44ce-b2a7-4322845fcdcd) | ![Descrição3](https://github.com/user-attachments/assets/71f802b8-5a0a-416d-a74c-517f4aab7ecd) |
-| *Gráfico Temperatura*              | *Gráfico Interativo*              | *Previsão nos Próximos Dias*              |
+| 🟦 **Imagem 1** 🟦       | 🟦 **Imagem 2** 🟦       | 🟦 **Imagem 3** 🟦       | 🟦 **Imagem 4** 🟦       |
+|--------------------------|--------------------------|--------------------------|--------------------------|
+| ![Descrição1](https://github.com/user-attachments/assets/3ce68dfe-aba5-4cd1-9c0f-e6a16be99d73) | ![Descrição2](https://github.com/user-attachments/assets/e1f7bec9-2192-42ea-aba3-7051021ff756) | ![Descrição3](https://github.com/user-attachments/assets/475ca998-4a89-44ce-b2a7-4322845fcdcd) | ![Descrição4](https://github.com/user-attachments/assets/71f802b8-5a0a-416d-a74c-517f4aab7ecd) |
+| *Tela Inicial*           | *Gráfico Temperatura*              | *Gráfico Interativo*              | *Previsão nos Próximos Dias*              |
 
 ## 📄 Licença
 Este projeto está licenciado sob a MIT License.
