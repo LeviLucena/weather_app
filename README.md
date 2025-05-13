@@ -82,7 +82,7 @@ Esta é uma aplicação web feita com **Flask** que consome dados da API de clim
 
 ```bash
 git clone https://github.com/LeviLucena/weather_app.git
-cd weather_app-app
+cd weather_app
 ```
 
 ### 2. Crie um ambiente virtual
