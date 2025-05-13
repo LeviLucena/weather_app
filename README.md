@@ -67,7 +67,7 @@ Esta é uma aplicação web feita com **Flask** que consome dados da API de clim
 ## 🛠️ Stack Tecnológica
 
 - 🐍 [Flask](https://flask.palletsprojects.com/) - Microframework web Python
-- 🗃️ [SQLAlchemy](https://www.sqlalchemy.org/) - ORM para banco de dados SQL
+- 💾 [SQLite](https://www.sqlite.org/index.html) - Banco de dados leve e embutido
 - ⛅ [Meteoblue API](https://content.meteoblue.com/en/business-solutions/weather-apis) - API de previsão do tempo
 - ⏱️ [APScheduler](https://apscheduler.readthedocs.io/) - Agendador de tarefas
 - 📊 [Matplotlib](https://matplotlib.org/) - Biblioteca para visualização de dados
