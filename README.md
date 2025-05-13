@@ -81,7 +81,7 @@ Esta é uma aplicação web feita com **Flask** que consome dados da API de clim
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/weather-forecast-app.git
+git clone https://github.com/LeviLucena/weather_app.git
 cd weather-forecast-app
 ```
 
