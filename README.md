@@ -64,15 +64,15 @@ Esta é uma aplicação web feita com **Flask** que consome dados da API de clim
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Stack Tecnológica
 
-- [Flask](https://flask.palletsprojects.com/)
-- [SQLAlchemy](https://www.sqlalchemy.org/)
-- [Meteoblue API](https://content.meteoblue.com/en/business-solutions/weather-apis)
-- [APScheduler](https://apscheduler.readthedocs.io/)
-- [Matplotlib](https://matplotlib.org/)
-- [Plotly](https://plotly.com/)
-- [Python Dotenv](https://pypi.org/project/python-dotenv/)
+- 🐍 [Flask](https://flask.palletsprojects.com/) - Microframework web Python
+- 🗃️ [SQLAlchemy](https://www.sqlalchemy.org/) - ORM para banco de dados SQL
+- ⛅ [Meteoblue API](https://content.meteoblue.com/en/business-solutions/weather-apis) - API de previsão do tempo
+- ⏱️ [APScheduler](https://apscheduler.readthedocs.io/) - Agendador de tarefas
+- 📊 [Matplotlib](https://matplotlib.org/) - Biblioteca para visualização de dados
+- 📈 [Plotly](https://plotly.com/) - Criação de gráficos interativos
+- 🔑 [Python Dotenv](https://pypi.org/project/python-dotenv/) - Gerenciamento de variáveis de ambiente
 
 ---
 
