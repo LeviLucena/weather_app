@@ -143,7 +143,8 @@ weather-app/
 | *Tela Inicial*           | *Gráfico Temperatura*              | *Gráfico Interativo*              | *Previsão nos Próximos Dias*              |
 
 ## 📄 Licença
-Este projeto está licenciado sob a MIT License.
+
+Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT) - veja o arquivo para detalhes.
 
 ## 🙋‍♂️ Contribuição
 Contribuições são bem-vindas! Sinta-se livre para abrir issues ou pull requests.
